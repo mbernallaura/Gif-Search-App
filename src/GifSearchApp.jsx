@@ -4,8 +4,8 @@ import { AddCategory } from "./components/AddCategory";
 export const GifSearchApp = () => {
   const [categories, setCategories] = useState(['One Punch', 'Dragon ball']);
  
-  const onAddCategory = () =>{
-    setCategories(['valorant', ...categories ]);
+  const onAddCategory = ( newCategory ) =>{
+    setCategories([ newCategory, ...categories ]);
     // setCategories(cat => [...cat, 'valorant'])
   }
 
@@ -15,10 +15,10 @@ export const GifSearchApp = () => {
       <h1>GifSearchApp</h1>
 
       {/* Input */}
-      <AddCategory/>
+      <AddCategory onNewCategory ={ onAddCategory }/>
 
       {/* Listado de Gifs */}
-      <button onClick={ onAddCategory }>Agregar</button>
+      
       <ol>
         {categories.map( category => {
             return <li key={ category }>{category}</li>
