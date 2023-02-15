@@ -2,9 +2,12 @@ import { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
 
 export const GifSearchApp = () => {
-  const [categories, setCategories] = useState(['One Punch', 'Dragon ball']);
+  const [categories, setCategories] = useState(['one punch', 'dragon ball']);
  
   const onAddCategory = ( newCategory ) =>{
+    newCategory = newCategory.toLowerCase();
+    //!Si la categoria ya existe, no haga nada
+    if(categories.includes(newCategory)) return;
     setCategories([ newCategory, ...categories ]);
     // setCategories(cat => [...cat, 'valorant'])
   }
@@ -20,7 +23,7 @@ export const GifSearchApp = () => {
       {/* Listado de Gifs */}
       
       <ol>
-        {categories.map( category => {
+        {categories.map( (category) => {
             return <li key={ category }>{category}</li>
           })
         }
