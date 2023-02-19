@@ -3,7 +3,7 @@ import { AddCategory } from "./components/AddCategory";
 import { GifGrid } from "./components/GifGrid";
 
 export const GifSearchApp = () => {
-  const [categories, setCategories] = useState(['one punch']);
+  const [categories, setCategories] = useState(['dragon ball']);
  
   const onAddCategory = ( newCategory ) =>{
     newCategory = newCategory.toLowerCase();
