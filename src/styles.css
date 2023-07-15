@@ -1,21 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Zen+Dots&display=swap');
+
+
+
 * {
     font-family: Helvetica, Arial, sans-serif;
-    background-color: rgb(234, 234, 234);
+    background-color:  #B7C0EE;
+    /* margin-top: auto; */
 }
 
-body {
-    padding: 60px;
+
+body, #root {
+    margin: 0;
+    padding: 1rem;
 }
 
 input {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(97, 32, 158);
-    color: black;
-    font-size: 1.2rem;
     outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: #564D80;
     padding: 10px 15px;
+    font-size: 1.2rem;
     width: 100%;
+}
+
+input:hover{
+    border: solid 1px white;
+    box-shadow: 0 0 20px #2C8C99;
+}
+
+input:focus{
+    border: solid 1px white;
+    box-shadow: 0 0 20px #2C8C99;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'Caprasimo', cursive;
+    font-size: 5rem;
+    background: linear-gradient(#564D80, #2C8C99);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 h2 {
@@ -23,8 +52,11 @@ h2 {
 }
 
 h3 {
-    font-size: 3rem;
-    margin-bottom: 5px;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    color: #564D80;
+    font-family: 'Caprasimo', cursive;
 }
 
 .card-grid {

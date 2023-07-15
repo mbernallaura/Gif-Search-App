@@ -15,7 +15,7 @@ export const GifSearchApp = () => {
   return (
     <>
       {/* Titulo */}
-      <h1>GifSearchApp</h1>
+      <h1>Gif Search</h1>
 
       {/* Input */}
       <AddCategory onNewCategory ={ onAddCategory }/>
